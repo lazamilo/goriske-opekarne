@@ -107,8 +107,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hero h1 .line>span{display:block}
 .hero h1 em{font-style:italic;color:#F3C9A2;font-synthesis:style}
 .hero__side{max-width:300px;font-size:15px;line-height:1.45;opacity:.92}
-.hero__meta{position:absolute;top:96px;left:var(--gutter);right:var(--gutter);display:flex;justify-content:space-between;opacity:.8}
-@media (max-width:760px){.hero__content{grid-template-columns:1fr}.hero__meta .hide-m{display:none}}
+@media (max-width:760px){.hero__content{grid-template-columns:1fr}}
 
 /* statement */
 .statement{padding:clamp(96px,16vh,200px) var(--gutter);display:grid;grid-template-columns:1fr 3fr;gap:var(--gutter)}
@@ -458,7 +457,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         <source src="assets/hero.mp4" type="video/mp4">
       </video>
     </div>
-    <div class="hero__meta mono"><span>Vipavska dolina, Slovenija</span><span class="hide-m">45°52′ N · 13°40′ E</span><span>Od 1948</span></div>
     <div class="hero__content">
       <h1 aria-label="Lepa na pogled, preizkušeno dobra.">
         <span class="line"><span>Lepa na pogled,</span></span>
@@ -832,7 +830,7 @@ intro
   .to('.loader', { yPercent: -100, duration: reduce ? .01 : 1.1, ease: 'expo.inOut' }, '+=.15')
   .from('.hero__media video, .hero__media img', { scale: 1.35, duration: 2.2, ease: 'expo.out' }, '-=.8')
   .from('.hero h1 .line>span', { yPercent: 110, duration: 1.3, stagger: .12, ease: 'expo.out' }, '-=1.9')
-  .from('.hero__side, .hero__meta', { opacity: 0, y: 20, duration: 1, stagger: .1, ease: 'power3.out' }, '-=1.1')
+  .from('.hero__side', { opacity: 0, y: 20, duration: 1, stagger: .1, ease: 'power3.out' }, '-=1.1')
   .set('.loader', { display: 'none' });
 const start = () => intro.play();
 if (document.readyState === 'complete') start(); else addEventListener('load', start);
