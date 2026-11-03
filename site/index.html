@@ -11,14 +11,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Roboto:wght@400&display=swap" rel="stylesheet">
 <style>
 /* Type: Canela Light (Commercial Type, licensed) for display, Roboto Regular for text.
-   Canela is not on a public CDN: drop the web files (or the trial .otf files) into assets/fonts/ with these names.
+   Canela is not on a public CDN: the trial .otf files live in assets/fonts/. With the web licence, add the
+   licensed .woff2 files here and list them before the trial .otf in each src.
    An installed desktop copy is used first via local().
    The Canela trial has only basic Latin (no č š ž — „ °), so Gilda Display fills those letters;
    it is the closest free match to Canela Light. The licensed files make this fallback unused. */
 @font-face{font-family:"Canela";font-weight:400;font-style:normal;font-display:swap;
-  src:local("Canela Light"),local("Canela-Light"),url("assets/fonts/Canela-Light-Web.woff2") format("woff2"),url("assets/fonts/Canela-Light-Web.woff") format("woff"),url("assets/fonts/Canela-Light-Trial.otf") format("opentype")}
+  src:local("Canela Light"),local("Canela-Light"),url("assets/fonts/Canela-Light-Trial.otf") format("opentype")}
 @font-face{font-family:"Canela";font-weight:400;font-style:italic;font-display:swap;
-  src:local("Canela Light Italic"),local("Canela-LightItalic"),url("assets/fonts/Canela-LightItalic-Web.woff2") format("woff2"),url("assets/fonts/Canela-LightItalic-Web.woff") format("woff"),url("assets/fonts/Canela-LightItalic-Trial.otf") format("opentype")}
+  src:local("Canela Light Italic"),local("Canela-LightItalic"),url("assets/fonts/Canela-LightItalic-Trial.otf") format("opentype")}
 :root{
   --paper:#F4EFE6;
   --stone:#E6DED1;
